@@ -12,7 +12,7 @@ const dates = [
 export default function App() {
   return <>
     <header className="site-header">
-      <a className="brand" href="#inicio" aria-label="Inicio Emiliano Villagra"><span className="ev-logo">EV</span><span className="brand-words">EMILIANO<br /><b>VILLAGRA</b></span></a>
+      <a className="brand" href="#inicio" aria-label="Inicio Emiliano Villagra"><span className="brand-words">EMILIANO<br /><b>VILLAGRA</b></span></a>
       <nav aria-label="Navegación principal">
         <a href="#musica">Música</a><a href="#bio">Biografía</a><a href="#fechas">Fechas</a><a href="#redes">Redes</a>
       </nav>
