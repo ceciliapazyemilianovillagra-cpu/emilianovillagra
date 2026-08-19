@@ -29,7 +29,7 @@ export default function App() {
           <div className="hero-actions"><a className="button gold" href="#musica">ESCUCHÁ AHORA ↗</a><a className="text-link" href="#bio">CONOCÉ SU HISTORIA ↓</a></div>
         </div>
         <div className="hero-photo">
-          <img src="/emiliano-en-vivo.webp" alt="Emiliano Villagra cantando en vivo" />
+          <img src="/emiliano-portada.jpg" alt="Emiliano Villagra cantando en vivo" />
           <p className="vertical-note">TUCUMÁN · ARGENTINA</p>
         </div>
       </section>
@@ -40,6 +40,17 @@ export default function App() {
         <div className="section-title"><p className="eyebrow">MÚSICA</p><h2>CANCIONES QUE<br />VUELVEN A CASA.</h2><p>Corazón Vivo, Entre Amigos y Corazón y Fuego. Una obra nacida de la raíz y llevada al presente.</p><a className="text-link dark" href={spotify} target="_blank" rel="noreferrer">ABRIR EN SPOTIFY ↗</a></div>
         <div className="spotify-wrap"><div className="poncho-corner" aria-hidden="true" /><iframe title="Emiliano Villagra en Spotify" src="https://open.spotify.com/embed/artist/3vSNxw6bYmiYDkVOfJ99YA?utm_source=generator" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" /></div>
       </section>
+
+      <section className="videos" id="videos">
+        <div className="videos-heading"><p className="eyebrow">EN VIVO</p><h2>LA VOZ EN<br />EL ESCENARIO.</h2><p>Interpretaciones, momentos y canciones para volver a escuchar.</p></div>
+        <div className="video-grid">
+          <iframe src="https://www.youtube.com/embed/02UWsxN3kYs" title="Emiliano Villagra en Telefe" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <iframe src="https://www.youtube.com/embed/KE04gVWnVEI" title="Emiliano Villagra en vivo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <iframe src="https://www.youtube.com/embed/2aQpK7PRDuM" title="Emiliano Villagra interpreta folklore" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        </div>
+      </section>
+
+      <section className="photo-strip" aria-label="Imágenes de Emiliano Villagra"><img src="/emiliano-semifinal.jpg" alt="Emiliano Villagra en La Voz Argentina" /><img src="/emiliano-telefe.jpg" alt="Promoción de Emiliano Villagra en Telefe" /><img src="/emiliano-disco.jpg" alt="Arte musical de Emiliano Villagra" /></section>
 
       <section className="bio" id="bio">
         <div className="bio-head"><p className="eyebrow">BIOGRAFÍA</p><h2>UNA VIDA<br />HECHA CANCIÓN.</h2><div className="bio-stamp">EV<br /><span>DESDE<br />TUCUMÁN</span></div></div>
@@ -58,6 +69,7 @@ export default function App() {
       <section className="social section" id="redes"><div><p className="eyebrow">SEGUÍ LA MÚSICA</p><h2>HISTORIAS QUE<br />SIGUEN SONANDO.</h2><p>Las novedades, canciones y momentos de cada escenario.</p></div><div className="social-links"><a href={instagram} target="_blank" rel="noreferrer"><b>Instagram</b><span>@emiliano.musica ↗</span></a><a href={facebook} target="_blank" rel="noreferrer"><b>Facebook</b><span>Emiliano Villagra Abadie ↗</span></a><a href={spotify} target="_blank" rel="noreferrer"><b>Spotify</b><span>Escuchar ahora ↗</span></a></div></section>
     </main>
 
+    <a className="whatsapp" href="https://wa.me/5493814066974?text=Hola%20Emiliano%21%20Quiero%20contratarte." target="_blank" rel="noreferrer" aria-label="Escribir a Emiliano por WhatsApp"><span>⌕</span><b>WhatsApp</b></a>
     <footer><div><p className="footer-name">EMILIANO <span>VILLAGRA</span></p><p>FOLCLORE TUCUMANO · ARGENTINA</p></div><div className="contact"><p>CONTACTO Y CONTRATACIONES</p><a href="mailto:emilianovillagra@gmail.com">emilianovillagra@gmail.com ↗</a></div></footer>
   </>
 }
