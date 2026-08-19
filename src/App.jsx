@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 
 const spotify = 'https://open.spotify.com/artist/3vSNxw6bYmiYDkVOfJ99YA'
@@ -10,6 +11,14 @@ const dates = [
 ]
 
 export default function App() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('main > section, main > .poncho-band, footer')
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target) }
+    }), { threshold: .12 })
+    elements.forEach((element, index) => { element.classList.add('scroll-reveal'); element.style.setProperty('--reveal-delay', `${Math.min(index * 55, 220)}ms`); observer.observe(element) })
+    return () => observer.disconnect()
+  }, [])
   return <>
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="Inicio Emiliano Villagra"><span className="brand-words">EMILIANO<br /><b>VILLAGRA</b></span></a>
