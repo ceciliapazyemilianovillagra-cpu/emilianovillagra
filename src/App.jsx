@@ -1,3 +1,63 @@
-import hero from './assets/hero.png';import './App.css';
-const spotify='https://open.spotify.com/artist/3vSNxw6bYmiYDkVOfJ99YA';
-export default function App(){return <><header><a className="brand" href="#inicio">EMILIANO<br/><span>VILLAGRA</span></a><nav><a href="#musica">Música</a><a href="#bio">Biografía</a><a href="#redes">Redes</a></nav><a className="listen" href={spotify}>ESCUCHÁ</a></header><main><section className="hero" id="inicio"><div className="hero-copy"><small>CANTANTE · AUTOR · COMPOSITOR</small><h1>EMILIANO<br/><em>VILLAGRA</em></h1><p>Folclore tucumano. Una voz cálida, canciones de raíz y un camino que sigue creciendo en cada escenario.</p><a className="button" href="#musica">ESCUCHÁ AHORA ↗</a></div><img src={hero} alt="Emiliano Villagra cantando en vivo"/></section><div className="poncho"/><section className="music" id="musica"><div><small>MÚSICA</small><h2>CANCIONES QUE<br/>VUELVEN A CASA.</h2><p>Corazón Vivo, Entre Amigos y Corazón y Fuego.</p></div><iframe title="Emiliano Villagra en Spotify" src="https://open.spotify.com/embed/artist/3vSNxw6bYmiYDkVOfJ99YA?utm_source=generator" height="352" loading="lazy"/></section><section className="bio" id="bio"><div><small>BIOGRAFÍA</small><h2>UNA VIDA<br/>HECHA CANCIÓN.</h2></div><p>Emiliano Villagra es cantante, autor y compositor tucumano, con una trayectoria profundamente ligada al folclore argentino. Integró Esperanza Norteña como primera voz, fue reconocido como Mejor Solista Vocal Masculino en Tucumán y en 2025 alcanzó proyección nacional en La Voz Argentina.</p></section><section className="redes" id="redes"><div><small>FACEBOOK</small><h2>ÚLTIMAS<br/>NOVEDADES.</h2></div><iframe title="Facebook de Emiliano Villagra" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Femilianofolklore%2F&tabs=timeline&width=500&height=500&adapt_container_width=true" height="500" loading="lazy"/></section></main><footer>EMILIANO VILLAGRA · <a href="https://www.instagram.com/emiliano.musica/">INSTAGRAM</a> · <a href={spotify}>SPOTIFY</a></footer></>}
+import './App.css'
+
+const spotify = 'https://open.spotify.com/artist/3vSNxw6bYmiYDkVOfJ99YA'
+const instagram = 'https://www.instagram.com/emiliano.musica/'
+const facebook = 'https://www.facebook.com/emilianofolklore/'
+
+const dates = [
+  { date: 'PRÓXIMAMENTE', place: 'Nuevas fechas en camino', city: 'Tucumán · Argentina' },
+  { date: 'CONTRATACIONES', place: 'Festivales, peñas y eventos', city: 'emilianovillagra@gmail.com' },
+]
+
+export default function App() {
+  return <>
+    <header className="site-header">
+      <a className="brand" href="#inicio" aria-label="Inicio Emiliano Villagra">EMILIANO<br /><span>VILLAGRA</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#musica">Música</a><a href="#bio">Biografía</a><a href="#fechas">Fechas</a><a href="#redes">Redes</a>
+      </nav>
+      <a className="listen" href={spotify} target="_blank" rel="noreferrer">♬ &nbsp; ESCUCHÁ</a>
+    </header>
+
+    <main>
+      <section className="hero" id="inicio">
+        <div className="hero-poncho" aria-hidden="true" />
+        <div className="hero-copy">
+          <p className="eyebrow">CANTANTE · AUTOR · COMPOSITOR</p>
+          <h1>EMILIANO<br /><span>VILLAGRA</span></h1>
+          <p className="hero-text">Folclore tucumano con una voz que abraza. Canciones de raíz, emoción y tierra adentro.</p>
+          <div className="hero-actions"><a className="button gold" href="#musica">ESCUCHÁ AHORA ↗</a><a className="text-link" href="#bio">CONOCÉ SU HISTORIA ↓</a></div>
+        </div>
+        <div className="hero-photo">
+          <img src="/emiliano-en-vivo.webp" alt="Emiliano Villagra cantando en vivo" />
+          <p className="vertical-note">TUCUMÁN · ARGENTINA</p>
+        </div>
+      </section>
+
+      <div className="poncho-band" aria-hidden="true"><span>◆</span><span>◆</span><span>◆</span><span>◆</span><span>◆</span><span>◆</span><span>◆</span><span>◆</span></div>
+
+      <section className="music section" id="musica">
+        <div className="section-title"><p className="eyebrow">MÚSICA</p><h2>CANCIONES QUE<br />VUELVEN A CASA.</h2><p>Corazón Vivo, Entre Amigos y Corazón y Fuego. Una obra nacida de la raíz y llevada al presente.</p><a className="text-link dark" href={spotify} target="_blank" rel="noreferrer">ABRIR EN SPOTIFY ↗</a></div>
+        <div className="spotify-wrap"><div className="poncho-corner" aria-hidden="true" /><iframe title="Emiliano Villagra en Spotify" src="https://open.spotify.com/embed/artist/3vSNxw6bYmiYDkVOfJ99YA?utm_source=generator" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" /></div>
+      </section>
+
+      <section className="bio" id="bio">
+        <div className="bio-head"><p className="eyebrow">BIOGRAFÍA</p><h2>UNA VIDA<br />HECHA CANCIÓN.</h2><div className="bio-stamp">EV<br /><span>DESDE<br />TUCUMÁN</span></div></div>
+        <div className="bio-copy">
+          <p>Emiliano Villagra Abadie es cantante, autor y compositor tucumano, con una trayectoria profundamente ligada al folclore argentino. Desde muy pequeño encontró en el tango y en la música de raíz las primeras influencias de un camino artístico que luego desarrollaría como intérprete y creador de sus propias canciones.</p>
+          <p>Entre 2004 y 2007 integró el reconocido conjunto <strong>Esperanza Norteña</strong>, desempeñándose como primera voz y compartiendo importantes escenarios del país. La agrupación fue distinguida como Revelación en el Festival Nacional de Baradero y obtuvo reconocimientos dentro y fuera de la Argentina. Emiliano también participó como cantante en el disco <em>Transitando caminos</em>.</p>
+          <p>Al iniciar su carrera solista continuó recorriendo peñas, encuentros culturales y festivales. En 2010 fue reconocido como Mejor Solista Vocal Masculino en la Peña Universitaria de la Universidad Nacional de Tucumán, representó a la provincia en el Pre Baradero e integró la delegación tucumana en el Festival Nacional de Folklore de Cosquín.</p>
+          <p>Como cantautor, sus composiciones hablan del amor, los paisajes, la vida cotidiana y la identidad de su tierra. Su producción incluye <strong>Corazón Vivo</strong>, <strong>Entre Amigos</strong> y <strong>Corazón y Fuego</strong>, además de canciones como <em>Fuego de otoño</em>, <em>Si te encuentro</em>, <em>Jimena Pastora</em> y <em>Resplandor de luna</em>.</p>
+          <p>En 2025 alcanzó proyección nacional en <strong>La Voz Argentina</strong>, como parte del equipo de Miranda!, llegando a instancias decisivas con interpretaciones de Encadenados, Honrar la vida, A la abuela Emilia, Universo paralelo y El arriero. En 2026 llevó su música al Festival Nacional de Doma y Folklore de Jesús María.</p>
+          <p className="bio-closing">Con una voz cálida y expresiva, Emiliano Villagra une la raíz folklórica con una mirada actual, llevando en cada interpretación la música, las historias y los paisajes de Tucumán.</p>
+        </div>
+      </section>
+
+      <section className="dates section" id="fechas"><div className="dates-title"><p className="eyebrow">AGENDA</p><h2>PRÓXIMAS<br />FECHAS.</h2><p>Cuando haya una nueva presentación, va a aparecer acá.</p></div><div className="dates-list">{dates.map(item => <article className="date-card" key={item.date}><p>{item.date}</p><h3>{item.place}</h3><span>{item.city}</span></article>)}</div></section>
+
+      <section className="social section" id="redes"><div><p className="eyebrow">SEGUÍ LA MÚSICA</p><h2>HISTORIAS QUE<br />SIGUEN SONANDO.</h2><p>Las novedades, canciones y momentos de cada escenario.</p></div><div className="social-links"><a href={instagram} target="_blank" rel="noreferrer"><b>Instagram</b><span>@emiliano.musica ↗</span></a><a href={facebook} target="_blank" rel="noreferrer"><b>Facebook</b><span>Emiliano Villagra Abadie ↗</span></a><a href={spotify} target="_blank" rel="noreferrer"><b>Spotify</b><span>Escuchar ahora ↗</span></a></div></section>
+    </main>
+
+    <footer><div><p className="footer-name">EMILIANO <span>VILLAGRA</span></p><p>FOLCLORE TUCUMANO · ARGENTINA</p></div><div className="contact"><p>CONTACTO Y CONTRATACIONES</p><a href="mailto:emilianovillagra@gmail.com">emilianovillagra@gmail.com ↗</a></div></footer>
+  </>
+}
