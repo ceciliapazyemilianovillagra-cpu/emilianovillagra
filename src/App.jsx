@@ -5,7 +5,7 @@ import { useAgenda } from './lib/useAgenda'
 const INSTAGRAM_URL = 'https://www.instagram.com/emiliano.musica/'
 const FACEBOOK_URL = 'https://www.facebook.com/emilianofolklore/'
 const WHATSAPP_NUMBER = '5493814066974'
-const EMAIL = 'emilianovillagra@gmail.com'
+const EMAIL = 'info@emilianovillagra.com.ar'
 
 const wa = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 
